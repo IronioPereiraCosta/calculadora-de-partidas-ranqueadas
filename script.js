@@ -1,37 +1,34 @@
-saldoVitorias(9, "Ferro");
-saldoVitorias(15, "Bronze");
-saldoVitorias(45, "Prata");
-saldoVitorias(78, "Ouro");
-saldoVitorias(85, "Diamante");
-saldoVitorias(95, "Lendário");
-saldoVitorias(101, "Imortal");
+saldoVitorias(65, 10);
 
-function saldoVitorias(saldo, nivel) {
+function saldoVitorias(vitorias, derrota) {
+  let saldo = vitorias - derrota;
+  let nivel = "Ferro";
   if (saldo < 10) {
-    console.log(`O herói tem saldo de ${saldo} e está no nível de ${nivel}`);
   }
 
   if (saldo >= 11 && saldo <= 20) {
-    console.log(`O herói tem saldo de ${saldo} e está no nível de ${nivel}`);
+    nivel = "Bronze";
   }
 
   if (saldo >= 21 && saldo <= 50) {
-    console.log(`O herói tem saldo de ${saldo} e está no nível de ${nivel}`);
+    nivel = "Prata";
   }
 
   if (saldo >= 51 && saldo <= 80) {
-    console.log(`O herói tem saldo de ${saldo} e está no nível de ${nivel}`);
+    nivel = "Ouro";
   }
 
   if (saldo >= 81 && saldo <= 90) {
-    console.log(`O herói tem saldo de ${saldo} e está no nível de ${nivel}`);
+    nivel = "Diamante";
   }
 
   if (saldo >= 91 && saldo <= 100) {
-    console.log(`O herói tem saldo de ${saldo} e está no nível de ${nivel}`);
+    nivel = "Lendário";
   }
 
   if (saldo >= 101) {
-    console.log(`O herói tem saldo de ${saldo} e está no nível de ${nivel}`);
+    nivel = "Imortal";
   }
+
+  console.log(`O herói tem saldo de ${saldo} e está no nível de ${nivel}`);
 }
